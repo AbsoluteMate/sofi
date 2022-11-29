@@ -82,11 +82,11 @@ $conn->close();
     <h2 style="text-align:center;margin-top:50px;">Inserisci un nuovo studente</h2>
     <form action="/addStudente.php">
         <label for="fname">Nome:</label><br>
-        <input type="text" id="fname" name="fname" value="John"><br>
+        <input type="text" id="fname" name="fname" value="John" required><br>
         <label for="lname">Cognome:</label><br>
-        <input type="text" id="lname" name="lname" value="Doe"><br><br>
+        <input type="text" id="lname" name="lname" value="Doe" required><br><br>
         <input type="submit" value="Submit">
-        <select name="scuola" id="scuola">
+        <select name="scuola" id="scuola" required>
             <?php
             if ($listaScuole->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
